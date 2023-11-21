@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="styles5.css"> <!-- Link to your CSS file -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Welcome, Member!</h1>
+
+    <div class="container">
+        <form id="editInfoForm" onsubmit="member_info_update(event)">
+            <!-- Added an ID for the form -->
+            <h2>Edit Your Information</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Your Username">
+
+            <label for="currentPassword">Current Password:</label>
+            <input type="password" id="currentPassword" placeholder="Current Password">
+
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" placeholder="New Password">
+
+            <label for="availableTime">Set Your Available Time:</label>
+            <select id="availableTime">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <!-- Add more time options as needed -->
+            </select>
+
+            <!-- Submit button for editing information -->
+            <button type="submit">Save Information</button>
+        </form>
+
+        <div class="membership-info">
+            <h2>Your Current Membership Plan</h2>
+            <p>Plan: Premium</p> <!-- Display the member's current plan here -->
+
+        </div>
+
+        <div class="session-selection">
+            <h2>Select Session</h2>
+            <label for="session">Choose a session:</label>
+            <select id="session">
+                <option value="session1">Session 1</option>
+                <option value="session2">Session 2</option>
+                <option value="session3">Session 3</option>
+                <!-- Add more session options as needed -->
+            </select>
+
+            <!-- Submit button for session selection -->
+            <button onclick="selectSession(event)">Select Session</button>
+        </div>
+    </div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles5.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Welcome, [Owner Username]!</h1>
+
+    <h2>Edit User Settings</h2>
+    <!-- Form for updating user settings with username -->
+    <form action="process_edit_user_settings.php" method="POST" onsubmit="editOwnerInfo(event)">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br><br>
+        <label for="current_password">Current Password:</label>
+        <input type="password" name="current_password" required><br><br>
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password" required><br><br>
+        <input type="submit" value="Update User Settings">
+    </form>
+
+    <h2>Add Trainer</h2>
+    <!-- Form for adding a trainer -->
+    <form action="process_add_trainer.php" method="POST" onsubmit="addTrainer(event)">
+        <label for="trainer_username">Trainer Username:</label>
+        <input type="text" name="trainer_username" required><br><br>
+        <label for="trainer_password">Trainer Password:</label>
+        <input type="password" name="trainer_password" required><br><br>
+        <input type="submit" value="Add Trainer">
+    </form>
+
+    <h2>Remove Trainer</h2>
+    <!-- Form for removing a trainer -->
+    <form action="process_remove_trainer.php" method="POST" onsubmit="removeTrainer(event)">
+        <label for="remove_trainer_username">Trainer Username:</label>
+        <input type="text" name="remove_trainer_username" required><br><br>
+        <input type="submit" value="Remove Trainer">
+    </form>
+
+    <hr>
+
+    <h2>Equipment Maintenance</h2>
+    <!-- Form for equipment maintenance -->
+    <form action="process_maintenance.php" method="POST" onsubmit="setMaintenance(event)">
+        <label for="equipment">Select Equipment:</label>
+        <select name="equipment" id="equipment" required>
+            <option value="" disabled selected>Select Equipment</option>
+            <option value="Treadmill 1">Treadmill 1</option>
+            <option value="Stationary Bike 3">Stationary Bike 3</option>
+            <option value="Weight Bench 2">Weight Bench 2</option>
+            <!-- Add more equipment options as needed -->
+        </select><br><br>
+        <input type="submit" value="Submit Maintenance">
+    </form>
+
+</body>
+
+</html>

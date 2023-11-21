@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Member Registration</title>
+    <link rel="stylesheet" type="text/css" href="styles4.css">
+</head>
+<body>
+    <div class="header">
+        <img src="newMember.jpeg" alt="Placeholder Image" class="logo">
+        <h1>New Member Registration</h1>
+    </div>
+
+    <form class="registration-form" action="submit_registration.php" method="post">
+        <label for="username">Set Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Set Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="membership-plan">Choose Membership Plan:</label>
+        <select id="membership-plan" name="membership-plan">
+            <option value="basic">Basic Plan</option>
+            <option value="premium">Premium Plan</option>
+
+        </select><br>
+
+        <label for="locker">Choose Locker:</label>
+        <select id="locker" name="locker">
+            <option value="locker1">Locker 1</option>
+            <option value="locker2">Locker 2</option>
+
+        </select><br>
+
+        <label for="payment-option">Choose Payment Option:</label>
+        <input type="radio" id="payment-card" name="payment-option" value="card">
+        <label for="payment-card">Credit Card</label>
+        <input type="radio" id="payment-cash" name="payment-option" value="cash">
+        <label for="payment-cash">Cash</label><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
